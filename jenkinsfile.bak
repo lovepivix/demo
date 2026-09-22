@@ -26,7 +26,7 @@ pipeline {
             steps {
                 echo '🔍 Checking out code...'
                 git branch: 'main',
-                    url: 'https://github.com/geekhall/demo.git',
+                    url: 'https://github.com/lovepivix/demo.git',
                     credentialsId: 'Github-token'
 
                 script {
@@ -93,7 +93,7 @@ pipeline {
                 echo '🚀 Deploying application...'
 
                 script {
-                    def remoteHost = 'username@XXX.XXX.XXX.XXX'
+                    def remoteHost = 'root@192.168.193.10'
                     def deployPath = '/opt/deployments'
                     def jarFile = "${APP_NAME}-${APP_VERSION}.jar"
 
